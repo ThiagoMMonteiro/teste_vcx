@@ -1,3 +1,5 @@
+import time
+
 class Node:
     """
     """
@@ -36,24 +38,37 @@ if __name__ == "__main__":
     
     s = Stack()
 
+    print (s)
+    time.sleep(2)
     s.add(5)
     print (s)
+    time.sleep(2)
     s.add("foo")
     print (s)
+    time.sleep(2)
     s.add("10.5")
     print (s)
+    time.sleep(2)
     s.add("7")
-    print (s)
+    print (s)    
 
     print ("___________________________________")
+    time.sleep(2)
+    print ("Removing...")
+    time.sleep(2)
 
     s.rem()
     print(s)
+    time.sleep(2)
     s.rem()
     print(s)
+    time.sleep(2)
     s.rem()
     print(s)
+    time.sleep(2)
     s.rem()
     print(s)
+    time.sleep(2)
+    print ("Trying to remove empty stack...")
+    time.sleep(2)
     s.rem()
-    print(s)

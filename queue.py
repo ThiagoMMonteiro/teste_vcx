@@ -1,3 +1,5 @@
+import time
+
 class Node:
     """
     """
@@ -52,36 +54,48 @@ if __name__ == "__main__":
     q = Queue()
 
     print (q)
+    time.sleep(2)
+    print ("Inserting...")
+    time.sleep(2)
     q.add(5)
     print (q)
+    time.sleep(2)
     q.add("foo")
     print (q)
+    time.sleep(2)
     q.add(10.5)
     print (q)
+    time.sleep(2)
     q.add("baz")
     print (q)
     
     print ("___________________________________")
+    time.sleep(2)
+    print ("Removing...")
+    time.sleep(2)
 
     q.rem()
     print (q)
+    time.sleep(2)
     q.rem()
     print (q)
+    time.sleep(2)
     q.rem()
     print (q)
+    time.sleep(2)
     q.rem()
     print (q)
+    time.sleep(2)
+    print ("Trying to remove empty queue...")
+    time.sleep(2)
     q.rem()
-    print (q)
 
     print ("___________________________________")
+    time.sleep(5)
 
-    q.add("baz")
-    print (q)
-
-    print ("___________________________________")
-
+    print ("Inserting an object...")
     p1 = Person("James", 50)
     q.add(p1)
     print (q)
+    time.sleep(2)
     print (p1.age)
