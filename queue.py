@@ -35,6 +35,12 @@ class Queue:
             self.last = None
         else:
             self.first = self.first.next_node
+
+    def is_empty(self):
+        if self.first:
+            return False
+        else:
+            return True
             
 
     def __str__(self):
@@ -53,12 +59,16 @@ class Person:
 if __name__ == "__main__":
     q = Queue()
 
+    
+
     print (q)
-    time.sleep(2)
+    print (f"Queue is empty? {q.is_empty()}")
+    time.sleep(5)
     print ("Inserting...")
     time.sleep(2)
     q.add(5)
     print (q)
+    print (f"Queue is empty? {q.is_empty()}")
     time.sleep(2)
     q.add("foo")
     print (q)
@@ -85,7 +95,8 @@ if __name__ == "__main__":
     time.sleep(2)
     q.rem()
     print (q)
-    time.sleep(2)
+    print (f"Queue is empty? {q.is_empty()}")
+    time.sleep(5)
     print ("Trying to remove empty queue...")
     time.sleep(2)
     q.rem()
