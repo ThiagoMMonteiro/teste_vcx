@@ -26,7 +26,7 @@ class Stack:
         self.last = node
 
     def rem(self):
-        if self.last == None:
+        if not self.last:
             print("The stack is already empty!")
         else:
             self.last = self.last.next_node

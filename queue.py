@@ -20,7 +20,7 @@ class Queue:
     def add(self, data):
         node = Node(data)
 
-        if self.first == None:
+        if not self.first:
             self.first = node
             self.last = node
         else:
@@ -28,9 +28,9 @@ class Queue:
             self.last = node
 
     def rem(self):
-        if self.first == None:
+        if not self.first:
             print("The queue is already empty!")
-        elif not self.first.next_node:
+        elif not self.first.next_node: #last node
             self.first = None
             self.last = None
         else:
@@ -42,7 +42,6 @@ class Queue:
         else:
             return True
             
-
     def __str__(self):
         return f" <- {self.first}"
 
@@ -58,8 +57,6 @@ class Person:
 
 if __name__ == "__main__":
     q = Queue()
-
-    
 
     print (q)
     print (f"Queue is empty? {q.is_empty()}")
