@@ -30,6 +30,12 @@ class Stack:
             print("The stack is already empty!")
         else:
             self.last = self.last.next_node
+    
+    def is_empty(self):
+        if self.last:
+            return False
+        else:
+            return True
 
     def __str__(self):
         return f" <- {self.last}"
@@ -39,9 +45,13 @@ if __name__ == "__main__":
     s = Stack()
 
     print (s)
+    print (f"Stack is empty? {s.is_empty()}")
+    time.sleep(5)
+    print ("Inserting...")
     time.sleep(2)
     s.add(5)
     print (s)
+    print (f"Stack is empty? {s.is_empty()}")
     time.sleep(2)
     s.add("foo")
     print (s)
@@ -68,7 +78,8 @@ if __name__ == "__main__":
     time.sleep(2)
     s.rem()
     print(s)
-    time.sleep(2)
+    print (f"Stack is empty? {s.is_empty()}")
+    time.sleep(5)
     print ("Trying to remove empty stack...")
     time.sleep(2)
     s.rem()

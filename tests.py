@@ -114,5 +114,13 @@ class Test_Class_Stack(unittest.TestCase):
         s.rem()
         self.assertEqual(str(s.last), 'None')
 
+    def test_is_empty(self):
+        s = stack.Stack()
+        self.assertEqual(s.is_empty(), True)
+        s.add(1)
+        self.assertEqual(s.is_empty(), False)
+        s.rem()
+        self.assertEqual(s.is_empty(), True)
+
 if __name__ == '__main__':
     unittest.main()
